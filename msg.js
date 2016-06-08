@@ -5,7 +5,7 @@ var loopHandle = null;
 // is appropriate
 messageSystem = {
     showMessage: function(msg) {
-        alert(msg);
+      ohSnap(msg, {'duration':'3000'});
     }
 };
 
@@ -34,16 +34,20 @@ function loop() {
 
 
 $(function() {
+   $('#notify').hide();
    $('#msgButton').click(function() {
        var btn = $(this),
       btnTxt = btn.text();
        if (btnTxt === 'Start Messages') {
            btn.text('Stop Messages');
            loopHandle = setTimeout(loop, 500);
+           $('#notify').show();
        } else {
            btn.text('Start Messages');
            clearTimeout(loopHandle);
            loopHandle = null;
+          $('#notify').hide();
+          $('#ohsnap').hide();
        }
-   } );
+   });
 });
