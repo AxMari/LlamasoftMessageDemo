@@ -7,7 +7,7 @@ messageSystem = {
     showMessage: function(msg) {
         alert(msg);
     }
-}
+};
 
 
 
