@@ -42,6 +42,7 @@ $(function() {
            btn.text('Stop Messages');
            loopHandle = setTimeout(loop, 500);
            $('#notify').show();
+           $('#ohsnap').show();
        } else {
            btn.text('Start Messages');
            clearTimeout(loopHandle);
